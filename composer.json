@@ -1,0 +1,12 @@
+{
+    "name": "koya/phpstantest",
+    "type": "project",
+    "require-dev": {
+        "phpstan/phpstan": "^1.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Koya\\Phpstantest\\": "src/"
+        }
+    }
+}

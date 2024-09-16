@@ -1,0 +1,11 @@
+# Composer関連
+vendor/
+composer.lock
+
+# キャッシュファイル
+*.log
+*.cache
+
+# OS関連
+.DS_Store
+Thumbs.db
