@@ -1,5 +1,5 @@
 <?php 
-namespace Medi\Line\Vega\Util;
+namespace Koya\Phpstantest\level;
 
 class Level0
 {

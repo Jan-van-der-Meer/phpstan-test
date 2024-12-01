@@ -1,5 +1,5 @@
 <?php 
-namespace Util;
+namespace Koya\Phpstantest\level;
 
 class Level2
 {
