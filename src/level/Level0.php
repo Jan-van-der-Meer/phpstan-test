@@ -1,5 +1,5 @@
 <?php 
-NAMESPACE Medi\Line\Vega\Util;
+namespace Medi\Line\Vega\Util;
 
 class Level0
 {
