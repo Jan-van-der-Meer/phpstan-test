@@ -4,3 +4,5 @@ parameters:
     paths:
         - src/
     editorUrl: 'vscode://file/%%file%%:%%line%%'
+rules:
+    - Koya\Phpstantest\rule\TestRule
