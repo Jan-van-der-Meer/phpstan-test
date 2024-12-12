@@ -1,8 +1,18 @@
 
 parameters:
-    level: 0 
+    level: 9 
     paths:
         - src/
     editorUrl: 'vscode://file/%%file%%:%%line%%'
 rules:
     - Koya\Phpstantest\rule\TestRule
+    - Koya\Phpstantest\rule\MethodNameRule
+services:
+    - 
+        class: Koya\Phpstantest\extension\OriginalMethodExtension
+        tags: 
+            - phpstan.methodParameterOutTypeExtension
+    - 
+        class: Koya\Phpstantest\extension\OriginalFunctionExtension
+        tags: 
+            - phpstan.functionParameterOutTypeExtension
