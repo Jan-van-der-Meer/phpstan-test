@@ -13,5 +13,8 @@
         "allow-plugins": {
             "phpstan/extension-installer": true
         }
+    },
+    "scripts": {
+        "phpstan-analyse": "./vendor/bin/phpstan analyse"
     }
 }

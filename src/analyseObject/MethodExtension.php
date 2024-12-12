@@ -1,15 +1,14 @@
 <?php
 namespace Koya\Phpstantest\analyseObject;
 
-use Koya\Phpstantest\extension\OriginalMethodExtension as ExtensionOriginalMethodExtension;
-
-class OriginalMethodExtension
+class MethodExtension
 {
     /**
-     * @param array{test2: string} $data
+     * @phpstan-param TestKoya<''> $data
      */
     public function testAction(array $data): void
     {
-        $a = $data["test"];
+        $a = $data["key"];
+        \PHPStan\dumpType($data);
     }
 }

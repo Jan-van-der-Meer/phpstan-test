@@ -16,3 +16,12 @@ services:
         class: Koya\Phpstantest\extension\OriginalFunctionExtension
         tags: 
             - phpstan.functionParameterOutTypeExtension
+    -
+        class: Koya\Phpstantest\phpdoctype\TestType
+        tags:
+            - phpstan.phpDoc.typeNodeResolverExtension
+    -
+        class: Koya\Phpstantest\phpdoctype\MyTypeNodeResolverExtension
+        tags:
+            - phpstan.phpDoc.typeNodeResolverExtension
+
