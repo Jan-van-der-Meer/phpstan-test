@@ -4,7 +4,6 @@ namespace Koya\Phpstantest\phpdoctype;
 
 use PHPStan\Analyser\NameScope;
 use PHPStan\PhpDoc\TypeNodeResolverExtension;
-use PHPStan\PhpDocParser\Ast\Type\GenericTypeNode;
 use PHPStan\PhpDocParser\Ast\Type\TypeNode;
 use PHPStan\Type\Constant\ConstantArrayTypeBuilder;
 use PHPStan\Type\Constant\ConstantStringType;
@@ -18,10 +17,6 @@ class TestType implements TypeNodeResolverExtension
     public function resolve(TypeNode $typeNode, NameScope $nameScope): ?Type
     {
 
-		if (!$typeNode instanceof GenericTypeNode) {
-			// returning null means this extension is not interested in this node
-			return null;
-		}
 		$typeName = $typeNode->type;
 		if ($typeName->name !== 'TestKoya') {
 			return null;
@@ -29,7 +24,12 @@ class TestType implements TypeNodeResolverExtension
 
         $newTypeBuilder = ConstantArrayTypeBuilder::createEmpty();
         $newTypeBuilder->setOffsetValueType( 
-            new ConstantStringType("key"),
+            new ConstantStringType("key1"),
+            new StringType()
+        );
+
+        $newTypeBuilder->setOffsetValueType( 
+            new ConstantStringType("key2"),
             new StringType()
         );
         $newTypes[] = $newTypeBuilder->getArray();

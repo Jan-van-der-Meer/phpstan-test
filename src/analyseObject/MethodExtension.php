@@ -8,7 +8,6 @@ class MethodExtension
      */
     public function testAction(array $data): void
     {
-        $a = $data["key"];
         \PHPStan\dumpType($data);
     }
 }
