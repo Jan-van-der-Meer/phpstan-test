@@ -4,6 +4,8 @@ parameters:
     paths:
         - src/
     editorUrl: 'vscode://file/%%file%%:%%line%%'
+    stubFiles:
+        - stub/ThirdParty.stub
 rules:
     - Koya\Phpstantest\rule\TestRule
     - Koya\Phpstantest\rule\MethodNameRule

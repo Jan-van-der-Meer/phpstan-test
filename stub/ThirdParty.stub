@@ -1,0 +1,11 @@
+<?php
+namespace Koya\Phpstantest\thirdparty;
+
+class ThirdParty
+{
+    /**
+     * @phpstan-param int $intArg
+     * @phpstan-return string
+     */
+    public function thirdPartyMethod($intArg);
+}
