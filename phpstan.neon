@@ -1,6 +1,5 @@
-
 parameters:
-    level: 9 
+    level: 0 
     paths:
         - src/
     editorUrl: 'vscode://file/%%file%%:%%line%%'
@@ -26,4 +25,7 @@ services:
         class: Koya\Phpstantest\phpdoctype\MyTypeNodeResolverExtension
         tags:
             - phpstan.phpDoc.typeNodeResolverExtension
-
+    -
+        class: Koya\Phpstantest\extension\TestDynamicMethodReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
